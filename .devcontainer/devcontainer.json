@@ -1,14 +1,34 @@
 {
-  "name": "My Codespace",
+  "name": "DevOps Workspace",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {},
+  "features": {
+    "docker-in-docker": {
+      "version": "latest"
+    },
+    "kubectl": {
+      "version": "latest"
+    },
+    "helm": {
+      "version": "latest"
+    },
+    "terraform": {
+      "version": "latest"
+    },
+    "github-cli": {
+      "version": "latest"
+    }
+  },
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
   "extensions": [
     "ms-azuretools.vscode-docker",
-    "ms-vscode.cpptools"
+    "hashicorp.terraform",
+    "redhat.vscode-yaml",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    "ms-vscode-remote.remote-containers"
   ],
-  "postCreateCommand": "echo Welcome to Codespaces!"
+  "postCreateCommand": "echo ✅ DevOps environment ready in Codespaces!"
 }
-
